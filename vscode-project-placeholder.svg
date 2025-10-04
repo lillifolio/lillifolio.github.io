@@ -1,0 +1,5 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#1e1e1e"/>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="36" fill="#007ACC" text-anchor="middle" font-weight="bold">VS Code Project</text>
+  <text x="400" y="230" font-family="Arial, sans-serif" font-size="20" fill="#D4D4D4" text-anchor="middle">Add your project screenshot here</text>
+</svg>
