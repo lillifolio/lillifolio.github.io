@@ -14,7 +14,7 @@
         <li><a href="ammatillinen portfolio.html">Etusivu</a></li>
         <li><a href="tiedosto1.html">Portfolio</a></li>
         <li><a href="tiedosto2.html">Taitoni</a></li>
-        <li><a href="#cv">CV</a></li>
+       <li><a href="javascript:void(0);" onclick="toggleCV()">CV</a></li>
       </ul>
     </div>
   </nav>
@@ -40,26 +40,38 @@
     <button class="reveal-btn" onclick="toggleHiddenText()">Lisätietoja kuvasta</button>
     <p id="hidden-text" style="display:none;">Profiilikuva tuotettu Snapchatin tekoälytyökalulla. Kuvan tarkoitus on toimia väliaikaisena visuaalisena elementtinä portfolion kehitysvaiheessa.</p>
   </div>
-  <script>
-    function toggleHiddenText() {
-      var x = document.getElementById('hidden-text');
-      if (x.style.display === 'none') {
-        x.style.display = 'block';
-      } else {
-        x.style.display = 'none';
-      }
+ <script>
+  function toggleHiddenText() {
+    var x = document.getElementById('hidden-text');
+    if (x.style.display === 'none') {
+      x.style.display = 'block';
+    } else {
+      x.style.display = 'none';
     }
-  </script>
+  }
+  function toggleCV() {
+    var cvSection = document.getElementById("cv");
+    if (cvSection.style.display === "none") {
+      cvSection.style.display = "block";
+      cvSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      cvSection.style.display = "none";
+    }
+  }
+</script>
+
   <p>Olen Lilli Hänninen, IT-tradenomiopiskelija ja tuleva ICT-asiantuntija. Tämä portfolio on ensimmäinen luonnokseni, jota täydennän opintojen ja kokemuksen karttuessa.</p>
   <div class="button-row">
     <a href="tiedosto1.html" class="link-btn">Portfolio</a>
     <a href="tiedosto2.html" class="link-btn">Taitoni</a>
     <a href="#cv" class="link-btn">CV</a>
-      <section id="cv">
-    <h2>Lilli Hännisen CV
-    <img src="CV.jpg" alt= "Lilli Hännisen CV"</h2>
-      style="max-width:100%; border:1px solid #ccc; border radius:8px;">
-    </section>
+     <section id="cv" style="display:none;">
+  <h2>Lilli Hännisen CV</h2>
+  <img src="CV.jpg" alt="Lilli Hännisen CV"
+       style="display:block; margin:20px auto; max-width:90%;
+              border:1px solid #ccc; border-radius:8px;
+              box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+</section>
   </div>
   <div class="button-row">
     <button class="link-btn" onclick="toggleContactInfo()">Ota yhteyttä</button>
