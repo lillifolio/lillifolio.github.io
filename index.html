@@ -7,11 +7,6 @@
   <link rel="stylesheet" href="ammatillinen portfolio.css">
 </head>
 <body>
-  <section id="cv">
-    <h2>Lilli Hännisen CV
-    <img src="CV.jpg" alt= "Lilli Hännisen CV"</h2>
-      style="max-width:100%; border:1px solid #ccc; border radius:8px;">
-    </section>
   <nav class="navbar">
     <div class="navbar-inner">
       <span class="nav-toggle" id="nav-toggle" onclick="toggleNavMenu()">&#9776;</span>
@@ -59,7 +54,12 @@
   <div class="button-row">
     <a href="tiedosto1.html" class="link-btn">Portfolio</a>
     <a href="tiedosto2.html" class="link-btn">Taitoni</a>
-    <a href="tiedosto3.html" class="link-btn">CV</a>
+    <a href="#cv" class="link-btn">CV</a>
+      <section id="cv">
+    <h2>Lilli Hännisen CV
+    <img src="CV.jpg" alt= "Lilli Hännisen CV"</h2>
+      style="max-width:100%; border:1px solid #ccc; border radius:8px;">
+    </section>
   </div>
   <div class="button-row">
     <button class="link-btn" onclick="toggleContactInfo()">Ota yhteyttä</button>
