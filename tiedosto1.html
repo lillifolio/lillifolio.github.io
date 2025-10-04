@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Tiedosto 1</title>
+  <link rel="stylesheet" href="ammatillinen portfolio.css">
+  <style>
+    body, body * { color: #000 !important; }
+    a { color: #000 !important; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <span class="nav-toggle" id="nav-toggle" onclick="toggleNavMenu()">&#9776;</span>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="ammatillinen portfolio.html">Etusivu</a></li>
+        <li><a href="tiedosto1.html">Portfolio</a></li>
+        <li><a href="tiedosto2.html">Taitoni</a></li>
+        <li><a href="tiedosto3.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+  <script>
+    function toggleNavMenu() {
+      var nav = document.getElementById('nav-links');
+      nav.classList.toggle('open');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      var navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          document.getElementById('nav-links').classList.remove('open');
+        });
+      });
+    });
+  </script>
+  <h1>Portfolio, näytteitä tekemistäni projekteista</h1>
+  <div class="image-container">
+  <img src="catphotoapp.jpg" alt="Kuva koodausharjoituksesta" style="max-width: 100%; height: auto; display: block; margin: 16px auto; border-radius: 10px;">
+  <p class="img-caption">Tästä <a href="https://www.freecodecamp.org/" class="org" target="_blank" rel="noopener">FreeCodeCampin</a> harjoitusprojektista aloitin koodausharjoittelun. Toteutin HTML-pohjaisen kissakuvasivuston osana FreeCodeCampin avustettua koodausharjoitusta, jossa etenin selkeiden vaiheittaisten ohjeiden mukaan. Tavoitteena oli oppia verkkosivun rakenteen luomista, kuvien lisäämistä ja peruselementtien käyttöä. Harjoitus toteutettiin FreeCodeCampin editorissa, ja käytetyt teknologiat olivat HTML5 ja kevyesti CSS.</p>
+  </div>
+<div class="image-container">
+  <img src="kakku.jpg" alt="Leivontakuva" style="max-width: 100%; height: auto; display: block; margin: 16px auto; border-radius: 10px;">
+<p>Tässä toinen  <a href="https://www.freecodecamp.org/" class="org" target="_blank" rel="noopener">FreeCodeCampin</a> harjoitus paremman sisällön puuttuessa. Rakensin yksinkertaisen reseptisivuston HTML:llä osana FreeCodeCampin harjoitusta, joka vaati enemmän itsenäistä työskentelyä kuin aiemmat tehtävät. Sivusto sisälsi reseptin otsikon, ainesosaluettelon ja valmistusohjeet, ja sen toteutuksessa hyödynsin aiemmin opittuja rakenteita ja elementtejä. Käytetyt teknologiat olivat HTML5 ja kevyt CSS-tyylittely.</p>
+</div>
+
+<div class="image-container">
+  <img src="placeholderyeschat.jpg" alt="Placeholder YesChat" style="max-width: 100%; height: auto; display: block; margin: 16px auto; border-radius: 10px;">
+  <p class="img-caption">Tämä on <a href="https://www.yeschat.ai/gpts-ZxWyYSin-PlaceImager" target="_blank" rel="noopener">YesChat PlaceImager</a> placeholder-kuva. Työstän edelleen esimerkiksi <a href="https://www.freecodecamp.org/" class="org" target="_blank" rel="noopener">FreeCodeCampin</a> opintoja, sekä muita projekteja tradenomiopinnoissani ja kehittelen sisältöä eteenpäin. </p>
+</div>
+  
+</body>
+</html>
