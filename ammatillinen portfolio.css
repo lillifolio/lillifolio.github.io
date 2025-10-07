@@ -1,63 +1,74 @@
-/* ...existing styles above... */
+/* --- EXISTING STYLES ABOVE --- */
 
-/* Main content styles for mobile-first layout */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-}
-
-/* Image container styles */
-.image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-/* Info content styles */
-.info-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-/* Responsive styles for larger screens */
-@media (min-width: 800px) {
-  .main-content {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 48px;
-    margin: 40px auto;
-    max-width: 900px;
-  }
-  .image-container {
-    flex: 0 0 320px;
-    margin-bottom: 0;
+/* NAVIGATION FIX FOR HAMBURGER MENU */
+@media (max-width: 700px) {
+  .navbar-inner {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     align-items: center;
   }
-  .info-content {
-    align-items: flex-start;
-    justify-content: center;
-    flex: 1;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #f181b1;
+    position: fixed;
+    top: 56px; /* below navbar */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1001;
+    padding-top: 2em;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-links li {
+    display: block;
+    text-align: center;
+    margin: 1.5em 0;
+    padding: 0;
+  }
+  .nav-links a {
+    font-size: 2em;
+    color: #222;
+  }
+  .nav-toggle {
+    display: block;
+    font-size: 2em;
+    z-index: 1100;
+    position: relative;
+    margin-right: 1em;
+    background: none;
+    border: none;
   }
 }
 
-/* Responsive styles for CV image */
-.cv-image {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+/* Show nav links inline on wider screens */
+@media (min-width: 701px) {
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    position: static;
+    height: auto;
+    width: auto;
+    opacity: 1;
+    pointer-events: auto;
+    box-shadow: none;
+  }
+  .nav-links li {
+    margin: 0 1em;
+  }
+  .nav-toggle {
+    display: none;
+  }
 }
