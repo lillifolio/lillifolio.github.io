@@ -33,13 +33,32 @@
     });
   </script>
   <script src="path-to-javascript-file.js"></script>
-  <h1 class="centered-title">Lilli<br>-Portfolion poikanen</h1>
-  <p class="welcome-text">Tervetuloa sivuilleni! Olen tuleva ICT-alan ammattilainen.</p>
-  <div class="image-container">
-    <img src="IMG_1165.jpg" alt="Kuva minusta" class="profile-pic">
-    <button class="reveal-btn" onclick="toggleHiddenText()">Lisätietoja kuvasta</button>
-    <p id="hidden-text" style="display:none;">Profiilikuva tuotettu Snapchatin tekoälytyökalulla. Kuvan tarkoitus on toimia väliaikaisena visuaalisena elementtinä portfolion kehitysvaiheessa.</p>
+
+  <div class="main-content">
+    <div class="image-container">
+      <img src="IMG_1165.jpg" alt="Kuva minusta" class="profile-pic">
+      <button class="reveal-btn" onclick="toggleHiddenText()">Lisätietoja kuvasta</button>
+      <p id="hidden-text" style="display:none;">Profiilikuva tuotettu Snapchatin tekoälytyökalulla. Kuvan tarkoitus on toimia väliaikaisena visuaalisena elementtinä portfolion kehitysvaiheessa.</p>
+    </div>
+    <div class="info-content">
+      <h1 class="centered-title">Lilli<br>-Portfolion poikanen</h1>
+      <p class="welcome-text">Tervetuloa sivuilleni! Olen tuleva ICT-alan ammattilainen.</p>
+      <p>Olen Lilli Hänninen, IT-tradenomiopiskelija ja tuleva ICT-asiantuntija. Tämä portfolio on ensimmäinen luonnokseni, jota täydennän opintojen ja kokemuksen karttuessa.</p>
+      <div class="button-row">
+        <a href="tiedosto1.html" class="link-btn">Portfolio</a>
+        <a href="tiedosto2.html" class="link-btn">Taitoni</a>
+        <a href="tiedosto3.html" class="link-btn">CV</a>
+      </div>
+      <div class="button-row">
+        <button class="link-btn" onclick="toggleContactInfo()">Ota yhteyttä</button>
+      </div>
+      <div id="contact-info" class="hidden-text" style="display:none;">
+        <strong>Sähköposti:</strong> lillihanninenn@gmail.com<br>
+        <strong>Puhelin:</strong> +358 400 388 870<br>
+      </div>
+    </div>
   </div>
+
   <script>
     function toggleHiddenText() {
       var x = document.getElementById('hidden-text');
@@ -49,21 +68,6 @@
         x.style.display = 'none';
       }
     }
-  </script>
-  <p>Olen Lilli Hänninen, IT-tradenomiopiskelija ja tuleva ICT-asiantuntija. Tämä portfolio on ensimmäinen luonnokseni, jota täydennän opintojen ja kokemuksen karttuessa.</p>
-  <div class="button-row">
-    <a href="tiedosto1.html" class="link-btn">Portfolio</a>
-    <a href="tiedosto2.html" class="link-btn">Taitoni</a>
-    <a href="tiedosto3.html" class="link-btn">CV</a>
-  </div>
-  <div class="button-row">
-    <button class="link-btn" onclick="toggleContactInfo()">Ota yhteyttä</button>
-  </div>
-  <div id="contact-info" class="hidden-text" style="display:none;">
-    <strong>Sähköposti:</strong> lillihanninenn@gmail.com<br>
-    <strong>Puhelin:</strong> +358 400 388 870<br>
-  </div>
-  <script>
     function toggleContactInfo() {
       var c = document.getElementById('contact-info');
       if (c.style.display === 'none') {
