@@ -1,0 +1,83 @@
+body {
+  background: #f181b1 !important;
+}
+
+/* Keep CV page background white */
+body.cv-bg-white {
+  background: #fff !important;
+}
+
+/* --- EXISTING STYLES ABOVE --- */
+
+/* NAVIGATION FIX FOR HAMBURGER MENU */
+@media (max-width: 700px) {
+  .navbar-inner {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #f181b1;
+    position: fixed;
+    top: 56px; /* below navbar */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1001;
+    padding-top: 2em;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-links li {
+    display: block;
+    text-align: center;
+    margin: 1.5em 0;
+    padding: 0;
+  }
+  .nav-links a {
+    font-size: 2em;
+    color: #222;
+  }
+  .nav-toggle {
+    display: block;
+    font-size: 2em;
+    z-index: 1100;
+    position: relative;
+    margin-right: 1em;
+    background: none;
+    border: none;
+  }
+}
+
+/* Show nav links inline on wider screens */
+@media (min-width: 701px) {
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    position: static;
+    height: auto;
+    width: auto;
+    opacity: 1;
+    pointer-events: auto;
+    box-shadow: none;
+  }
+  .nav-links li {
+    margin: 0 1em;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}

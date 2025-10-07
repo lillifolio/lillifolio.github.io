@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taidot ja tekninen osaamiseni</title>
+  <link rel="stylesheet" href="ammatillinen portfolio.css">
+  <style>
+    .skills {
+      max-width: 500px;
+      margin: 16px 0 32px 0;
+      padding: 0 16px;
+    }
+    .skill {
+      margin-bottom: 18px;
+    }
+    .skill-bar-bg {
+      background: #eee;
+      border-radius: 8px;
+      height: 28px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .skill-bar {
+      background: linear-gradient(90deg, #000 100%, #fff 100%);
+      color: #f181b1;
+      font-weight: bold;
+      height: 100%;
+      width: 0;
+      border-radius: 8px 0 0 8px;
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+      font-size: 1em;
+      transition: width 1.2s cubic-bezier(.4,2,.6,1);
+      box-sizing: border-box;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <span class="nav-toggle" id="nav-toggle" onclick="toggleNavMenu()">&#9776;</span>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="ammatillinen portfolio.html">Etusivu</a></li>
+        <li><a href="tiedosto1.html">Portfolio</a></li>
+        <li><a href="tiedosto2.html">Taitoni</a></li>
+        <li><a href="tiedosto3.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+  <script>
+    function toggleNavMenu() {
+      var nav = document.getElementById('nav-links');
+      nav.classList.toggle('open');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      var navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          document.getElementById('nav-links').classList.remove('open');
+        });
+      });
+      var bars = document.querySelectorAll('.skill-bar');
+      bars.forEach(function(bar) {
+        var level = bar.getAttribute('data-level');
+        setTimeout(function() {
+          bar.style.width = level + '%';
+        }, 300);
+      });
+    });
+  </script>
+  <h1>Taidot ja tekninen osaamiseni</h1>
+  <h2>HTML5</h2>
+  <p>Perustason osaaminen. Osaan rakentaa verkkosivun rakenteen, lisätä kuvia ja käyttää keskeisiä elementtejä.</p>
+  <div class="skills">
+    <div class="skill">
+      <div class="skill-bar-bg">
+        <div class="skill-bar" data-level="75">Perustaso</div>
+      </div>
+    </div>
+  </div>
+  <h2>CSS</h2>
+  <p>Perustason osaaminen. Osaan tyylitellä verkkosivun ulkoasua, kuten värejä, fontteja ja asettelua.</p>
+  <div class="skills">
+    <div class="skill">
+      <div class="skill-bar-bg">
+        <div class="skill-bar" data-level="70">Perustaso</div>
+      </div>
+    </div>
+  </div>
+  <h2>Microsoft Office (Word, Excel, PowerPoint)</h2>
+  <p>Erinomainen osaaminen. Hallitsen asiakirjojen muotoilun, taulukkolaskennan perusteet ja esitysten rakentamisen.</p>
+  <div class="skills">
+    <div class="skill">
+      <div class="skill-bar-bg">
+        <div class="skill-bar" data-level="100">Erinomainen</div>
+      </div>
+    </div>
+  </div>
+  <h2>Tietoturvan ja digihygienian perusteet</h2>
+  <p>Perustason osaaminen. Ymmärrän vahvojen salasanojen merkityksen, tiedostojen suojaamisen ja turvallisen verkon käytön.</p>
+  <div class="skills">
+    <div class="skill">
+      <div class="skill-bar-bg">
+        <div class="skill-bar" data-level="70">Perustaso</div>
+      </div>
+    </div>
+  </div>
+  <h2>Verkkopalveluiden käyttö ja arviointi</h2>
+  <p>Erinomainen.  Osaan käyttää digitaalisia palveluita sujuvasti ja arvioida niiden toimivuutta, käytettävyyttä ja käyttäjäkokemusta kriittisesti. Hyödynnän palveluita tarkoituksenmukaisesti ja tunnistan kehityskohteita sekä vahvuuksia.</p>
+  <div class="skills">
+    <div class="skill">
+      <div class="skill-bar-bg">
+        <div class="skill-bar" data-level="100">Erinomainen</div>
+      </div>
+    </div>
+  </div>
+  <h2>Asiakaspalvelu ja viestintätaidot</h2>
+  <p>Erinomainen osaaminen. Osaan viestiä selkeästi ja tilanteeseen sopivasti eri kanavissa sekä kohdata asiakkaat ammattimaisesti ja empaattisesti. Hyödynnän vuorovaikutustaitoja rakentavan yhteistyön edistämiseksi ja osaan mukauttaa viestintää eri kohderyhmien tarpeisiin. </p>
+  <div class="skills">
+    <div class="skill">
+      <div class="skill-bar-bg">
+        <div class="skill-bar" data-level="100">Erinomainen</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
