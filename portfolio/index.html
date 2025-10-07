@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lilli Hänninen — Portfolio</title>
+  <style>
+    :root{
+      --nav-height:56px;
+      --accent:#f181b1;
+      --text:#222;
+      --bg:#fff0f6;
+      --max-width:1400px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
+
+    
+    .navbar{position:fixed;top:0;left:0;right:0;height:var(--nav-height);background:rgba(255,255,255,.95);box-shadow:0 2px 8px rgba(0,0,0,.06);z-index:1000}
+    .navbar-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 16px;display:flex;align-items:center;justify-content:space-between}
+    .nav-toggle{display:none;font-size:1.4em;background:none;border:none;cursor:pointer}
+    .nav-links{list-style:none;padding:0;margin:0;display:flex;gap:18px;align-items:center}
+    .nav-links a{text-decoration:none;color:var(--text);padding:6px 8px;border-radius:6px;font-weight:500}
+    @media (max-width:700px){
+      .nav-toggle{display:inline-block}
+      .nav-links{position:absolute;top:var(--nav-height);left:0;right:0;flex-direction:column;background:var(--bg);box-shadow:0 2px 8px rgba(0,0,0,.08);display:none;padding:12px;gap:10px}
+      .nav-links.open{display:flex}
+    }
+
+   
+    main{width:100%;max-width:var(--max-width);margin:0 auto;padding:calc(var(--nav-height) + 24px)16px 96px;display:flex;flex-direction:column;gap:12px;align-items:center}
+    .page-title{text-align:center;font-size:clamp(1.2rem,2.4vw,1.8rem);margin:8px 0 6px;line-height:1.15;letter-spacing:1px}
+    .welcome-text{max-width:980px;text-align:center;margin:0 auto;color:var(--text);font-size:clamp(.95rem,1.6vw,1.05rem);margin-bottom:18px}
+
+    
+    .hero-wrap{width:100%;display:flex;flex-direction:column;gap:18px;align-items:center}
+    .text-column{width:100%}
+    .hero-img{width:95vw;max-width:1400px;height:auto;display:block;object-fit:cover;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,.08);margin:0 auto;max-height:85vh}
+
+    @media (min-width:900px) {
+    
+      main {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 32px;
+        padding-top: calc(var(--nav-height) + 32px);
+      }
+
+      .hero-wrap {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 28px;
+        width: 100%;
+      }
+
+      
+      .hero-img {
+        width: 65%;
+        max-width: none;
+        border-radius: 14px;
+        margin: 0;
+        object-fit: cover;
+      }
+
+      
+      .text-column {
+        width: 35%;
+        text-align: left;
+        padding-top: 6px;
+      }
+
+      
+      .button-row {
+        position: static;
+        margin-top: 24px;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        justify-content: flex-start;
+        width: auto;
+      }
+
+    
+      .page-title { font-size: 1.6rem; text-align: left; }
+      .welcome-text { font-size: 1rem; text-align: left; }
+    }
+    @media (min-width:1600px){.hero-img{width:1400px}}
+
+    
+    .image-info{max-width:900px;margin:12px auto 0;color:var(--text);text-align:left}
+    .hidden{display:none!important}
+    #more-image-info-btn{padding:6px 10px;font-size:.875rem;border-radius:6px;line-height:1}
+
+    .button-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+    .link-btn{background:var(--accent);color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.06);white-space:nowrap}
+    .link-btn.secondary{background:#fff;color:var(--text);border:1px solid #eee}
+    @media (max-width:700px){.link-btn{padding:10px 14px}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Päävalikko">
+    <div class="navbar-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Näytä valikko">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Etusivu</a></li>
+        <li><a href="tiedosto1.html">Portfolio</a></li>
+        <li><a href="tiedosto2.html">Taitoni</a></li>
+        <li><a href="tiedosto3.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="hero-wrap">
+      <div class="text-column">
+        <h1 class="page-title">LILLI - Portfolion poikanen</h1>
+        <p class="welcome-text">Tervetuloa sivuilleni! Olen tuleva ICT-alan ammattilainen. Tämä portfolio laajenee opintojen ja projektien myötä.</p>
+      </div>
+<div>
+      <img src="IMG_1165.jpg" alt="Kuva" class="hero-img" />
+
+
+    <div style="width:100%;text-align:center;margin-top:10px">
+      <a href="#" id="more-image-info-btn" class="link-btn" aria-expanded="false">Lisätietoa kuvasta</a>
+      <div id="image-info" class="hidden image-info" aria-hidden="true">
+        <p>Tämä profiilikuva on luotu Snapchatin tekoälytyökalulla. Kuva toimii väliaikaisena visuaalisena elementtinä nettisivuni kehitysvaiheessa.</p>
+      </div>
+    </div>
+    
+<div>
+    <div class="button-row" role="group" aria-label="Toiminnot">
+      <a class="link-btn" href="tiedosto1.html">Portfolio</a>
+      <a class="link-btn" href="tiedosto3.html">CV</a>
+      <a class="link-btn" href="tiedosto2.html">Taidot</a>
+    </div>
+
+    
+    <div style="width:100%;text-align:center;margin-top:12px">
+      <a href="#" id="contact-btn" class="link-btn secondary" aria-expanded="false">Ota yhteyttä</a>
+      <div id="contact-info" class="hidden contact-info" aria-hidden="true">
+        <p>Sähköposti: lillihanninenn@gmail.com Puhelin: +358 400 388 870</p>
+      </div>
+    </div>
+  
+  </main>
+
+  <script>
+    (function(){
+      var nav = document.getElementById('nav-links');
+      var toggle = document.getElementById('nav-toggle');
+      toggle.addEventListener('click', function(){
+        var isOpen = nav.classList.toggle('open');
+        this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      document.addEventListener('click', function(e){
+        if (e.target.matches('.nav-links a')){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false') }
+      });
+
+      var btn = document.getElementById('more-image-info-btn');
+      var info = document.getElementById('image-info');
+      if(btn && info){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', (!expanded).toString());
+          info.classList.toggle('hidden', expanded);
+          info.setAttribute('aria-hidden', expanded ? 'true' : 'false');
+          if(!expanded) info.scrollIntoView({behavior:'smooth',block:'center'});
+        });
+      }
+
+      var contactBtn = document.getElementById('contact-btn');
+      var contactInfo = document.getElementById('contact-info');
+      if(contactBtn && contactInfo){
+        contactBtn.addEventListener('click', function(e){
+          e.preventDefault();
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', (!expanded).toString());
+          contactInfo.classList.toggle('hidden', expanded);
+          contactInfo.setAttribute('aria-hidden', expanded ? 'true' : 'false');
+          if(!expanded) contactInfo.scrollIntoView({behavior:'smooth',block:'center'});
+        });
+      }
+
+      window.addEventListener('resize', function(){ if(window.innerWidth>700){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false') }});
+    })();
+  </script>
+</body>
+</html>
