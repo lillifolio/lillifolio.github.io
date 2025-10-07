@@ -1,3 +1,12 @@
+body {
+  background: #f181b1 !important;
+}
+
+/* Keep CV page background white */
+body.cv-bg-white {
+  background: #fff !important;
+}
+
 /* --- EXISTING STYLES ABOVE --- */
 
 /* NAVIGATION FIX FOR HAMBURGER MENU */
